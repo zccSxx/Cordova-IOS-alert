@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<plugin xmlns="http://www.phonegap.com/ns/plugins/1.0"
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  id="cn.com.cordovaAlert"
+  version="0.1.0">
+  <name> CordovaAlert </name>
+  <description>CordovaAlert Plugin</description>
+  <license>Apache 2.0</license>
+  <keywords>cordova,alert</keywords>
+  
+  <js-module src="www/CordovaAlert.js" name="CordovaAlert">
+    <clobbers target="CordovaAlert" />
+  </js-module>
+
+  <!-- android版本暂无 --> 
+   <!-- <platform name="android">
+      <config-file target="res/xml/config.xml" parent="/*">  
+      <feature name=“AlertPlugin”>   
+           <param name="android-package" value=“cn.com.agree.cordovaAlert”/>  
+               </feature>
+             </config-file>    
+          <source-file src="src/android/AlertPlugin.java" target-dir="src/com/badrit/	CordovaAlert/“ />
+       </platform>  -->
+ 
+
+  <!-- ios -->
+  <platform name="ios">
+   <config-file target="config.xml" parent="/*">
+     <feature name="AlertPlugin">
+       <param name="ios-package" value="AlertPlugin" />
+       <param name="onload" value="true" />
+     </feature>
+   </config-file>
+
+   <header-file src="src/ios/CordovaAlert.h" />
+   <source-file src="src/ios/CordovaAlert.m" />
+ </platform>
+
+</plugin>
